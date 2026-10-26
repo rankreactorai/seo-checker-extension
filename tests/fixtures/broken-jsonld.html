@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Broken schema example page for testing JSON-LD parsing</title>
+    <script type="application/ld+json">
+      { "@context": "https://schema.org", "@type": "Article", "headline": "Oops", }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          { "@type": ["WebPage", "AboutPage"], "name": "About" },
+          { "@type": "Organization", "name": "Example Co" },
+          { "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1 }] }
+        ]
+      }
+    </script>
+    <script type="application/ld+json"></script>
+  </head>
+  <body>
+    <h1>About us</h1>
+    <p>We make things.</p>
+  </body>
+</html>
